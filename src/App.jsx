@@ -15,33 +15,48 @@ import './App.css'
 
 const recommendations = [
   {
-    genre: '신스팝',
-    title: 'After Hours',
-    artist: 'The Weeknd',
-    description: '밤 산책이나 드라이브에 어울리는 몽환적인 신스팝 앨범이에요.',
-    spotifyId: '03NCvBIGqzLPhLoi4pDb3L',
-  },
-  {
-    genre: '팝',
-    title: 'Future Nostalgia',
-    artist: 'Dua Lipa',
-    description: '밝고 리듬감 있는 팝 음악이 필요할 때 듣기 좋은 앨범이에요.',
-    spotifyId: '7fJJK56U9fHixgO0HQkhtI',
-  },
-  {
-    genre: 'K-pop',
-    title: "NewJeans 2nd EP 'Get Up'",
-    artist: 'NewJeans',
-    description: '가볍고 세련된 분위기의 K-pop을 듣고 싶을 때 추천해요.',
-    spotifyId: '4N1fROq2oeyLGAlQ1C1j18',
+    genre: '인디 록',
+    title: 'EVERYTHING',
+    artist: '검정치마',
+    description: '잔잔한 기타와 감성적인 보컬이 어우러지는 인디 록 곡이에요.',
+    spotifyId: '4vb7g4GrE9cOrhEzUWadN8',
   },
   {
     genre: '인디 팝',
-    title: 'folklore',
-    artist: 'Taylor Swift',
-    description: '조용히 집중하거나 비 오는 날 듣기 좋은 감성적인 앨범이에요.',
-    spotifyId: '2fenSS68JI1h4Fo296JfGr',
+    title: 'seasons',
+    artist: 'wave to earth',
+    description: '계절이 바뀌는 듯한 분위기를 담은 따뜻한 밴드 사운드예요.',
+    spotifyId: '5VBjyOQzqlPNgdRPMM6prF',
   },
+  {
+    genre: 'R&B',
+    title: 'Square (2017)',
+    artist: '백예린',
+    description: '담담하면서도 깊은 감정이 느껴지는 백예린의 대표곡이에요.',
+    spotifyId: '0WZhf0isd4av5qlFfKknC3',
+  },
+  {
+    genre: '힙합',
+    title: 'FLYING HIGH WITH U',
+    artist: '빈첸',
+    description: '감성적인 멜로디와 솔직한 랩이 어우러진 곡이에요.',
+    spotifyId: '4iZIvaus7v4wSjFvdF83NA',
+  },
+  {
+    genre: '포크',
+    title: '숲',
+    artist: '최유리',
+    description: '차분한 목소리와 따뜻한 분위기로 위로를 전하는 곡이에요.',
+    spotifyId: '33xRp6ZX1DKraRFHR9ZDck',
+  },
+  {
+    genre: 'OST',
+    title: '밤, 바다',
+    artist: '최유리',
+    description: '고요한 밤바다 같은 분위기가 매력적인 감성적인 곡이에요.',
+    spotifyId: '7zkut02u2ekBqbZeT395YF',
+  },
+  
 ]
 
 function App() {
@@ -143,7 +158,7 @@ function App() {
           <div className="album-area">
             <iframe
               title={`${music.title} 앨범`}
-              src={`https://open.spotify.com/embed/album/${music.spotifyId}?utm_source=generator`}
+              src={`https://open.spotify.com/embed/track/${music.spotifyId}?utm_source=generator`}
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               loading="lazy"
             />
