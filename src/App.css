@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Gowun+Batang&display=swap');
+
 .app {
   min-height: 100vh;
   display: flex;
@@ -279,4 +281,160 @@ button:hover {
    문구만 먼저 서서히 사라져요 */
 .intro-text.intro-text-hidden {
   opacity: 0;
+}
+
+.memory-landing {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 48px 8vw;
+  background: #1c1917;
+  color: #fffaf4;
+}
+
+.memory-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(24, 18, 14, 0.94) 0%, rgba(24, 18, 14, 0.7) 48%, rgba(24, 18, 14, 0.15) 100%),
+    linear-gradient(0deg, rgba(24, 18, 14, 0.55), transparent 50%);
+  z-index: 1;
+}
+
+.memory-content {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+}
+
+.memory-label {
+  margin-bottom: 24px;
+  color: #e8bd7c;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+}
+
+.memory-content h1 {
+  margin: 0;
+  font-family: 'Gowun Batang', serif;
+  font-size: clamp(42px, 6vw, 78px);
+  font-weight: 400;
+  line-height: 1.28;
+  letter-spacing: -0.06em;
+}
+
+.memory-message {
+  margin-top: 30px;
+  color: rgba(255, 250, 244, 0.78);
+  font-family: 'Gowun Batang', serif;
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.enter-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 42px;
+  padding: 16px 22px;
+  border: 1px solid rgba(255, 250, 244, 0.55);
+  border-radius: 999px;
+  background: transparent;
+  color: #fffaf4;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  transition: 0.25s ease;
+}
+
+.enter-button:hover {
+  transform: translateY(-3px);
+  background: #fffaf4;
+  color: #2a201c;
+}
+
+.enter-button span {
+  font-size: 20px;
+}
+
+.memory-gallery {
+  position: absolute;
+  right: 5vw;
+  bottom: 7vh;
+  z-index: 1;
+  display: flex;
+  align-items: end;
+  gap: 14px;
+}
+
+.memory-gallery img {
+  width: clamp(110px, 13vw, 190px);
+  height: clamp(175px, 24vw, 310px);
+  object-fit: cover;
+  opacity: 0.88;
+  filter: sepia(12%) saturate(80%);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.memory-gallery img:nth-child(2) {
+  height: clamp(220px, 30vw, 390px);
+  transform: translateY(-36px);
+}
+
+.memory-gallery img:nth-child(3) {
+  height: clamp(145px, 20vw, 260px);
+}
+
+.scroll-note {
+  position: absolute;
+  right: 8vw;
+  bottom: 28px;
+  z-index: 2;
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: rgba(255, 250, 244, 0.55);
+}
+
+@media (max-width: 700px) {
+  .memory-landing {
+    align-items: flex-start;
+    padding: 18vh 28px 40px;
+  }
+
+  .memory-content h1 {
+    font-size: 43px;
+  }
+
+  .memory-message {
+    font-size: 15px;
+  }
+
+  .memory-gallery {
+    right: 24px;
+    bottom: 80px;
+    gap: 8px;
+  }
+
+  .memory-gallery img {
+    width: 85px;
+    height: 130px;
+  }
+
+  .memory-gallery img:nth-child(2) {
+    height: 180px;
+    transform: translateY(-20px);
+  }
+
+  .memory-gallery img:nth-child(3) {
+    height: 110px;
+  }
+
+  .scroll-note {
+    display: none;
+  }
 }

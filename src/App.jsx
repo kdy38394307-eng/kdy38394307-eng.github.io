@@ -76,6 +76,7 @@ function App() {
   const [introStage, setIntroStage] = useState('text')
 
   const music = recommendations[recommendationIndex]
+  const [hasEntered, setHasEntered] = useState(false)
 
   // 인트로 화면의 시간표를 짜는 부분이에요.
   // "3.5초 뒤에는 문구를 지워라", "5.5초 뒤에는 전체를 지워라" 처럼
@@ -168,6 +169,57 @@ function App() {
       (currentIndex) => (currentIndex + 1) % recommendations.length,
     )
   }
+
+  if (!hasEntered) {
+  return (
+    <main className="memory-landing">
+      <div className="memory-overlay"></div>
+
+      <section className="memory-content">
+        <p className="memory-label">MUSIC & MEMORIES</p>
+
+        <h1>
+          음악 한 곡이
+          <br />
+          그날의 우리를 데려올 때
+        </h1>
+
+        <p className="memory-message">
+          지나간 계절, 함께 웃었던 순간,
+          <br />
+          그리고 아직 마음속에 남아 있는 이야기.
+          <br />
+          여러분의 추억을 음악으로 공유해 주세요.
+        </p>
+
+        <button
+          type="button"
+          className="enter-button"
+          onClick={() => setHasEntered(true)}
+        >
+          추억 속으로 들어가기 <span>→</span>
+        </button>
+      </section>
+
+      <section className="memory-gallery" aria-label="추억 사진">
+        <img
+          src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=700&q=80"
+          alt="함께 즐기는 음악 축제"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=700&q=80"
+          alt="친구들과 함께한 즐거운 순간"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=700&q=80"
+          alt="소중한 사람들과의 추억"
+        />
+      </section>
+
+      <p className="scroll-note">SCROLL TO REMEMBER</p>
+    </main>
+  )
+}
 
   return (
     <>
