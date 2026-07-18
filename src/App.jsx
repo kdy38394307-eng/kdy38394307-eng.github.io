@@ -242,19 +242,28 @@ function App() {
       return
     }
 
+    if (!user) {
+      setSubmissionMessage('저장 연결을 준비 중입니다. 잠시 후 다시 눌러주세요.')
+      return
+    }
+
     setSubmissionLoading(true)
 
     try {
       await addDoc(collection(db, 'songSubmissions'), {
         ...nextSubmission,
-        userId: user?.uid ?? null,
+        userId: user.uid,
         createdAt: serverTimestamp(),
       })
 
       setSubmission(initialSubmission)
       setSubmissionMessage('추천이 저장됐어요. 좋은 음악 고마워요.')
-    } catch {
-      setSubmissionMessage('추천 저장에 실패했습니다. 잠시 후 다시 시도해 주세요.')
+    } catch (error) {
+      if (error.code === 'permission-denied') {
+        setSubmissionMessage('Firebase 저장 권한이 막혀 있어요. Firestore 규칙을 확인해 주세요.')
+      } else {
+        setSubmissionMessage('추천 저장에 실패했습니다. 잠시 후 다시 시도해 주세요.')
+      }
     } finally {
       setSubmissionLoading(false)
     }
