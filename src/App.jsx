@@ -63,140 +63,7 @@ const recommendations = [
   title: 'Antifreeze',
   artist: '검정치마',
   description: '몽환적인 기타 사운드와 담백한 감성이 돋보이는 대표곡이에요.',
-  spotifyId: '0U4bQKJH7mYtF0FfGvY7Xn',
-},
-{
-  genre: '인디 팝',
-  title: 'bad',
-  artist: 'wave to earth',
-  description: '잔잔하면서도 몽환적인 분위기가 매력적인 곡이에요.',
-  spotifyId: '3v5o91PrUtf0nmO6j8J7dZ',
-},
-{
-  genre: 'R&B',
-  title: '그건 아마 우리의 잘못은 아닐 거야',
-  artist: '백예린',
-  description: '섬세한 감정선을 아름답게 표현한 감성 R&B 곡이에요.',
-  spotifyId: '6g6x8Jv75KgR4cThxKkk4D',
-},
-{
-  genre: '발라드',
-  title: 'Love poem',
-  artist: '아이유',
-  description: '따뜻한 위로를 전하는 감성 발라드예요.',
-  spotifyId: '7HrE6HtYNBbGqp5GmHbFV0',
-},
-{
-  genre: '발라드',
-  title: '밤편지',
-  artist: '아이유',
-  description: '조용한 밤에 듣기 좋은 포근한 감성의 노래예요.',
-  spotifyId: '3P3UA61WRQqwCXaoFOTENd',
-},
-{
-  genre: '인디',
-  title: '주저하는 연인들을 위해',
-  artist: '잔나비',
-  description: '따뜻한 밴드 사운드와 서정적인 가사가 인상적인 곡이에요.',
-  spotifyId: '6wN6Q1v4Qv7v4N0sQk9nQj',
-},
-{
-  genre: '인디',
-  title: '꿈과 책과 힘과 벽',
-  artist: '잔나비',
-  description: '청춘의 감성을 담은 서정적인 밴드 음악이에요.',
-  spotifyId: '6MoQ0GQWvYQ8M2S2N5rX4N',
-},
-{
-  genre: '인디 팝',
-  title: 'Your Dog Loves You',
-  artist: 'Colde',
-  description: '포근한 멜로디와 부드러운 보컬이 매력적인 곡이에요.',
-  spotifyId: '5LOFhskslqjQTFg56sQf5A',
-},
-{
-  genre: 'R&B',
-  title: '와르르 ♥',
-  artist: 'Colde',
-  description: '감미로운 보컬과 따뜻한 감성이 돋보이는 곡이에요.',
-  spotifyId: '4nQxqN4v7n4mP0rR7t8A8H',
-},
-{
-  genre: '인디',
-  title: 'Home',
-  artist: '김수영',
-  description: '잔잔한 피아노와 감성적인 목소리가 인상적인 노래예요.',
-  spotifyId: '6v0Kyx0yM2mKQ7dVY2xQ9D',
-},
-{
-  genre: '포크',
-  title: '잘 지내자, 우리',
-  artist: '짙은',
-  description: '담담한 위로를 건네는 따뜻한 포크 발라드예요.',
-  spotifyId: '4t4k1qJH3Q3fWzM5w8nH2A',
-},
-{
-  genre: '인디',
-  title: 'To My Youth',
-  artist: '볼빨간사춘기',
-  description: '청춘의 불안과 희망을 담은 감성적인 곡이에요.',
-  spotifyId: '2vG4nH9Gm3Sg2M0m6cXh4V',
-},
-{
-  genre: '발라드',
-  title: '너였다면',
-  artist: '정승환',
-  description: '애절한 감정이 진하게 전해지는 발라드예요.',
-  spotifyId: '5GEPc1qk2t3uQ5r9v4fM6L',
-},
-{
-  genre: 'OST',
-  title: 'Beautiful',
-  artist: 'Crush',
-  description: '달콤한 감성이 가득한 로맨틱 OST예요.',
-  spotifyId: '7M6CFRuBrM5x7u0kZXHYQ6',
-},
-{
-  genre: 'OST',
-  title: 'Stay With Me',
-  artist: '찬열, 펀치',
-  description: '웅장하면서도 감성적인 분위기가 인상적인 OST예요.',
-  spotifyId: '1HYzRuWjmS9LXCkdVHi25K',
-},
-{
-  genre: 'R&B',
-  title: 'instagram',
-  artist: 'DEAN',
-  description: '세련된 사운드와 감성적인 가사가 매력적인 곡이에요.',
-  spotifyId: '6zX5f3x9v8R4vK5cP7A4lY',
-},
-{
-  genre: '인디 팝',
-  title: '우주를 줄게',
-  artist: '볼빨간사춘기',
-  description: '사랑스러운 감성과 따뜻한 멜로디가 돋보이는 곡이에요.',
-  spotifyId: '2dQ4VJ9cX2sL4t6F8nH3Bq',
-},
-{
-  genre: '발라드',
-  title: '취기를 빌려',
-  artist: '산들',
-  description: '부드러운 보컬과 감미로운 분위기가 인상적인 노래예요.',
-  spotifyId: '2QjOHCTQ1Jl3zawyYOpxh6',
-},
-{
-  genre: '포크',
-  title: '그대라는 시',
-  artist: '태연',
-  description: '잔잔한 피아노 선율이 아름다운 감성 발라드예요.',
-  spotifyId: '3q6qPk7hN4JQYfD9wL2QeQ',
-},
-{
-  genre: '인디',
-  title: '우연을 믿어요',
-  artist: '적재',
-  description: '따뜻한 기타 사운드와 감성적인 가사가 매력적인 곡이에요.',
-  spotifyId: '2q8Xv7Qw6jM8Rk2N9bP1Ft',
+  spotifyId: '745W6tNeXVKjskHoCsMJvV',
 },
 ]
 
@@ -246,6 +113,7 @@ function App() {
   const [likeRanking, setLikeRanking] = useState(
     recommendations.map((music) => ({ ...music, likes: 0 })),
   )
+  const [storyLikes, setStoryLikes] = useState({}) // { [storyId]: { liked: boolean, count: number } }
   const [likeLoading, setLikeLoading] = useState(false)
   const [rankingLoading, setRankingLoading] = useState(false)
   const [message, setMessage] = useState('')
@@ -374,6 +242,46 @@ function App() {
     }
   }
 
+  async function loadStoryLikes(storyList) {
+  if (!user || storyList.length === 0) return
+
+  try {
+    const entries = await Promise.all(
+      storyList.map(async (story) => {
+        const likeId = `${story.id}_${user.uid}`
+
+        const [myLike, allLikes] = await Promise.all([
+          getDoc(doc(db, 'storyLikes', likeId)),
+          getCountFromServer(
+            query(
+              collection(db, 'storyLikes'),
+              where('storyId', '==', story.id),
+            ),
+          ),
+        ])
+
+        return [
+          story.id,
+          { liked: myLike.exists(), count: allLikes.data().count },
+        ]
+      }),
+    )
+
+    setStoryLikes((current) => ({
+      ...current,
+      ...Object.fromEntries(entries),
+    }))
+  } catch {
+    // 사연 공감 정보는 실패해도 화면 흐름을 막지 않도록 조용히 넘어감
+  }
+}
+
+useEffect(() => {
+  if (!user || stories.length === 0) return
+
+  loadStoryLikes(stories)
+}, [stories, user])
+
   useEffect(() => {
     if (!user) return
 
@@ -402,6 +310,30 @@ function App() {
     }
   }
 
+  async function addStoryLike(storyId) {
+  if (!user || storyLikes[storyId]?.liked) return
+
+  try {
+    const likeId = `${storyId}_${user.uid}`
+
+    await setDoc(doc(db, 'storyLikes', likeId), {
+      storyId,
+      userId: user.uid,
+      createdAt: serverTimestamp(),
+    })
+
+    setStoryLikes((current) => ({
+      ...current,
+      [storyId]: {
+        liked: true,
+        count: (current[storyId]?.count || 0) + 1,
+      },
+    }))
+  } catch {
+    setMessage('공감 저장에 실패했습니다. 다시 시도해 주세요.')
+  }
+}
+
   function showRandomRecommendation() {
     const unseenRecommendations = recommendations.filter(
       (item) => !seenRecommendationIds.includes(item.spotifyId),
@@ -426,6 +358,28 @@ function App() {
     ])
     setMessage('')
   }
+
+  function selectRecommendationById(spotifyId) {
+  const nextIndex = recommendations.findIndex(
+    (item) => item.spotifyId === spotifyId,
+  )
+
+  if (nextIndex === -1) return
+
+  setShowRecommendation(true)
+  setRecommendationIndex(nextIndex)
+  setSeenRecommendationIds((currentIds) =>
+    currentIds.includes(spotifyId)
+      ? currentIds
+      : [...currentIds, spotifyId],
+  )
+  setMessage('')
+  setShowSubmitForm(false)
+
+  document
+    .querySelector('.music-column')
+    ?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+}
 
   function updateSubmission(event) {
     const { name, value } = event.target
@@ -634,9 +588,22 @@ function App() {
                   <div className="story-track">
                     {stories.map((story) => (
                       <article className="story-item" key={story.id}>
-                        <strong>{story.nickname}</strong>
-                        <p>{story.story}</p>
-                      </article>
+  <strong>{story.nickname}</strong>
+  <p>{story.story}</p>
+  <button
+    type="button"
+    className={
+      storyLikes[story.id]?.liked
+        ? 'story-like-button liked'
+        : 'story-like-button'
+    }
+    onClick={() => addStoryLike(story.id)}
+    disabled={!user || storyLikes[story.id]?.liked}
+  >
+    {storyLikes[story.id]?.liked ? '👍 공감함' : '👍 공감'} ·{' '}
+    {storyLikes[story.id]?.count ?? 0}
+  </button>
+</article>
                     ))}
                   </div>
                 </div>
@@ -719,17 +686,23 @@ function App() {
           </div>
 
           <ol className="ranking-list">
-            {likeRanking.map((item, index) => (
-              <li key={item.spotifyId}>
-                <span className="rank-number">{index + 1}</span>
-                <div>
-                  <strong>{item.title}</strong>
-                  <p>{item.artist}</p>
-                </div>
-                <span className="rank-like">{item.likes}</span>
-              </li>
-            ))}
-          </ol>
+  {likeRanking.map((item, index) => (
+    <li key={item.spotifyId}>
+      <button
+        type="button"
+        className="ranking-item-button"
+        onClick={() => selectRecommendationById(item.spotifyId)}
+      >
+        <span className="rank-number">{index + 1}</span>
+        <div>
+          <strong>{item.title}</strong>
+          <p>{item.artist}</p>
+        </div>
+        <span className="rank-like">{item.likes}</span>
+      </button>
+    </li>
+  ))}
+</ol>
 
           {rankingLoading && <p className="ranking-note">순위 불러오는 중...</p>}
         </aside>
