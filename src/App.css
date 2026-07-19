@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Gowun+Batang&display=swap');
 
+/*
+  01. 기본 공통 설정
+  02. 메인 화면 · 추천 카드
+  03. 사연 카드
+  04. 버튼 · 입력 폼
+  05. 인기 음악 순위
+  06. 첫 화면(추억 랜딩)
+  07. 반응형 화면
+*/
+
+/* ========== 01. 기본 공통 설정 ========== */
+
 * {
   box-sizing: border-box;
 }
@@ -59,6 +71,8 @@ button:disabled {
     linear-gradient(135deg, #fffaf4 0%, #f7f0e8 46%, #eef5f1 100%);
   color: #27211d;
 }
+
+/* ========== 02. 메인 화면 · 추천 카드 ========== */
 
 .main-hero,
 .content-layout {
@@ -127,6 +141,7 @@ button:disabled {
 }
 
 .recommendation,
+.stories-card,
 .empty-card,
 .submission-card,
 .ranking-card {
@@ -141,11 +156,13 @@ button:disabled {
 .recommendation {
   display: grid;
   grid-template-columns: minmax(260px, 0.95fr) minmax(280px, 1.05fr);
+  align-items: start;
   text-align: left;
 }
 
 .album-area {
-  min-height: 352px;
+  height: 352px;
+  align-self: start;
   background: #191414;
 }
 
@@ -157,6 +174,7 @@ button:disabled {
 }
 
 .description-area,
+.stories-card,
 .empty-card,
 .submission-card,
 .ranking-card {
@@ -172,6 +190,7 @@ button:disabled {
 }
 
 .description-area h2,
+.stories-card h2,
 .empty-card h2,
 .submission-card h2,
 .ranking-card h2 {
@@ -190,6 +209,88 @@ button:disabled {
   color: #5f544d;
   line-height: 1.75;
 }
+
+/* ========== 03. 사연 카드 ========== */
+
+.stories-card {
+  gap: 18px;
+  padding: 26px 28px 28px;
+}
+
+.story-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0;
+}
+
+.story-heading h2 {
+  margin-top: 5px;
+  font-size: clamp(22px, 2.5vw, 28px);
+}
+
+.story-heading > div {
+  min-width: 0;
+}
+
+.story-heading > span {
+  flex: 0 0 auto;
+}
+
+.story-heading span,
+.story-note,
+.form-note {
+  color: #7c6c60;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.story-window {
+  position: relative;
+  max-height: 210px;
+  overflow: hidden;
+  mask-image: linear-gradient(to bottom, transparent, black 8%, black 90%, transparent);
+}
+
+.story-track {
+  display: grid;
+  gap: 10px;
+  padding: 8px 0;
+}
+
+.story-window.is-scrolling .story-track {
+  animation: story-scroll 16s ease-in-out infinite alternate;
+}
+
+.story-item {
+  padding: 13px 14px;
+  border-radius: 10px;
+  background: rgba(247, 240, 232, 0.74);
+}
+
+.story-item strong {
+  color: #2f6f63;
+  font-size: 14px;
+}
+
+.story-item p {
+  margin-top: 6px;
+  color: #5f544d;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@keyframes story-scroll {
+  from { transform: translateY(0); }
+  to { transform: translateY(-35%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .story-window.is-scrolling .story-track { animation: none; }
+}
+
+/* ========== 04. 버튼 · 입력 폼 ========== */
 
 .button-group {
   display: flex;
@@ -259,6 +360,8 @@ button:disabled {
   box-shadow: 0 0 0 4px rgba(47, 111, 99, 0.12);
 }
 
+/* ========== 05. 인기 음악 순위 ========== */
+
 .ranking-card {
   position: sticky;
   top: 24px;
@@ -325,6 +428,8 @@ button:disabled {
   font-weight: 700;
   text-align: center;
 }
+
+/* ========== 06. 첫 화면(추억 랜딩) ========== */
 
 .memory-landing {
   position: relative;
@@ -440,6 +545,8 @@ button:disabled {
   color: rgba(255, 250, 244, 0.55);
 }
 
+/* ========== 07. 반응형 화면 ========== */
+
 @media (max-width: 900px) {
   .app {
     padding: 36px 18px;
@@ -466,6 +573,7 @@ button:disabled {
   }
 
   .description-area,
+  .stories-card,
   .empty-card,
   .submission-card,
   .ranking-card {
@@ -473,7 +581,7 @@ button:disabled {
   }
 
   .album-area {
-    min-height: 300px;
+    height: 300px;
   }
 
   .album-area iframe {
@@ -551,7 +659,7 @@ button:disabled {
   }
 
   .album-area {
-    min-height: 260px;
+    height: 260px;
   }
 
   .album-area iframe {

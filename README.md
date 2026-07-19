@@ -1,16 +1,29 @@
-# React + Vite
+# 음악 추천 사이트
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## 폴더 구성
 
-Currently, two official plugins are available:
+```
+src/
+├── components/   # 화면 컴포넌트
+│   └── App.jsx
+├── services/     # 외부 서비스 연결
+│   └── firebase.js
+├── styles/       # 화면 스타일
+│   ├── App.css
+│   └── global.css
+└── main.jsx      # 앱 시작 파일
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 실행
 
-## React Compiler
+```bash
+npm install
+npm run dev
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 주요 기능
 
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- 오늘의 랜덤 음악 추천 및 좋아요
+- 하루 한 번 노래와 사연 추천
+- 같은 곡 아래에 모이는 청취자 사연
+- 사연이 많아질 때 자동 스크롤
