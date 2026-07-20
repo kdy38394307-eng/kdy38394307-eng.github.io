@@ -17,53 +17,46 @@ import './App.css'
 
 const recommendations = [
   {
-    genre: '인디 록',
     title: 'EVERYTHING',
     artist: '검정치마',
-    description: '잔잔한 기타와 감성적인 보컬이 어우러지는 인디 록 곡이에요.',
     spotifyId: '4vb7g4GrE9cOrhEzUWadN8',
+    description: '검정치마의 대중적이 대표곡'
   },
   {
-    genre: '인디 팝',
     title: 'seasons',
     artist: 'wave to earth',
-    description: '계절이 바뀌는 듯한 분위기를 담은 따뜻한 밴드 사운드예요.',
     spotifyId: '5VBjyOQzqlPNgdRPMM6prF',
+    description: '주인장의 감상평 : wave to earth중 가장 좋아하는 곡'
   },
   {
-    genre: 'R&B',
     title: 'Square (2017)',
     artist: '백예린',
-    description: '담담하면서도 깊은 감정이 느껴지는 백예린의 대표곡이에요.',
     spotifyId: '0WZhf0isd4av5qlFfKknC3',
+    description: '주인장의 감상평 : 화창한 날 들으면 기분 좋은 곡?'
   },
   {
-    genre: '힙합',
-    title: 'FLYING HIGH WITH U',
-    artist: '빈첸',
-    description: '감성적인 멜로디와 솔직한 랩이 어우러진 곡이에요.',
-    spotifyId: '4iZIvaus7v4wSjFvdF83NA',
-  },
-  {
-    genre: '포크',
     title: '숲',
     artist: '최유리',
-    description: '차분한 목소리와 따뜻한 분위기로 위로를 전하는 곡이에요.',
     spotifyId: '33xRp6ZX1DKraRFHR9ZDck',
+    description: '주인장의 감상평 : 새벽에 들으면 감성적으로 변함'
   },
   {
-    genre: 'OST',
     title: '밤, 바다',
     artist: '최유리',
-    description: '고요한 밤바다 같은 분위기가 매력적인 감성적인 곡이에요.',
     spotifyId: '7zkut02u2ekBqbZeT395YF',
+    description: '주인장의 감상평 : 새벽에 들으면 감성적으로 변함2'
   },
   {
-  genre: '인디 록',
   title: 'Antifreeze',
   artist: '검정치마',
-  description: '몽환적인 기타 사운드와 담백한 감성이 돋보이는 대표곡이에요.',
   spotifyId: '745W6tNeXVKjskHoCsMJvV',
+  description: '주인장의 감상평 : 한국 인디 록의 대중성있는 곡'
+},
+{
+  title: '좋은 밤 좋은 꿈',
+  artist: '너드커넥션',
+  spotifyId: '3s761CQaziQ0GEN1yUkIsG',
+  description: '주인장의 감상평 : 지나간 추억을 미화시키는 사기 곡'
 },
 ]
 
@@ -548,10 +541,13 @@ useEffect(() => {
                 </div>
 
                 <div className="description-area">
-                  <p className="category">{music.genre}</p>
+                  <p className="category">TODAY'S PICK</p>                 
                   <h2>{music.title}</h2>
                   <p className="artist">{music.artist}</p>
-                  <p className="description">{music.description}</p>
+                  <p className="curator-note">
+                  <span className="curator-label">주인장의 감상평</span>
+                  <span className="curator-text">{music.description}</span>
+                  </p>
 
                   <div className="button-group">
                     <button

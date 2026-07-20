@@ -180,7 +180,7 @@ button:disabled {
 .ranking-card {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 18px;
   padding: 28px;
 }
 
@@ -588,6 +588,35 @@ button:disabled {
   font-size: 10px;
   letter-spacing: 0.18em;
   color: rgba(255, 250, 244, 0.55);
+}
+
+.curator-note {
+  margin-top: 8px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(47, 111, 99, 0.14);
+  display: grid;
+  gap: 6px;
+}
+
+.curator-label {
+  color: #2f6f63;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.curator-label::after {
+  content: '';
+}
+
+.curator-text {
+  display: block;
+  color: #5f544d;
+  font-family: 'Gowun Batang', serif;
+  font-size: 15px;
+  line-height: 1.75;
 }
 
 /* ========== 07. 반응형 화면 ========== */
