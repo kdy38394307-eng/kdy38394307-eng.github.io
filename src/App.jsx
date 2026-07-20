@@ -58,6 +58,30 @@ const recommendations = [
   spotifyId: '3s761CQaziQ0GEN1yUkIsG',
   description: '지나간 추억을 미화시키는 사기 곡'
 },
+{
+  title: 'Nandemonaiya',
+  artist: 'RADWIMPS',
+  spotifyId: '7dEfa89dZfo6CQPdsgGCF6',
+  description: '이곡 들으면서 산책하면 미츠하 감정이입 가능'
+},
+{
+  title: 'Pretender',
+  artist: 'OFFICIAL HIGE DANDISM',
+  spotifyId: '1OBAWkIciXl8rmbKtrp9ZG',
+  description: '무슨 말인지 모르겠지만 일단 신남'
+},
+{
+  title: '애열',
+  artist: '이희상',
+  spotifyId: '467zSU1hr4OF3Zq5zVX3Dt',
+  description: '개인적으로 목소리랑 바이브가 감성적이라 매우 추천'
+},
+{
+  title: '은방울',
+  artist: 'DANIEL',
+  spotifyId: '4gAIUEY7VkeiKQOPwIYaYb',
+  description: '인스타에 많이 보이는 감성적인 브금'
+},
 ]
 
 const initialSubmission = {
@@ -72,7 +96,7 @@ const featuredStories = {
       id: 'samchogoryeo-everything',
       nickname: '삼초고려',
       story:
-        '일상에 지치고 사랑에 실패해 한참을 헤매던 때, 아무 일정도 없던 어느 밤 그 사람을 만났어요. 이 곡을 들으며 함께 걸었던 밤바다는 아직도 선명해요. Everything이 흐르면, 잠시 멈춰 있던 마음에도 다시 낭만이 찾아오는 것 같습니다.',
+        '일상에 지치고 사랑에 실패해 한참을 헤매던 때, 아무 일정도 없던 어느 날 밤 그 사람을 만났습니다. 이 곡을 들으며 함께 걸었던 밤바다는 아직도 선명해요. 지난 추억이 되었지만 이 곡을 들으면 그때의 행복했던 추억이 생각납니다!',
     },
   ],
 }
