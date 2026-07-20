@@ -26,37 +26,37 @@ const recommendations = [
     title: 'seasons',
     artist: 'wave to earth',
     spotifyId: '5VBjyOQzqlPNgdRPMM6prF',
-    description: '주인장의 감상평 : wave to earth중 가장 좋아하는 곡'
+    description: 'wave to earth중 가장 좋아하는 곡'
   },
   {
     title: 'Square (2017)',
     artist: '백예린',
     spotifyId: '0WZhf0isd4av5qlFfKknC3',
-    description: '주인장의 감상평 : 화창한 날 들으면 기분 좋은 곡?'
+    description: '화창한 날 들으면 기분 좋은 곡?'
   },
   {
     title: '숲',
     artist: '최유리',
     spotifyId: '33xRp6ZX1DKraRFHR9ZDck',
-    description: '주인장의 감상평 : 새벽에 들으면 감성적으로 변함'
+    description: '새벽에 들으면 감성적으로 변함'
   },
   {
     title: '밤, 바다',
     artist: '최유리',
     spotifyId: '7zkut02u2ekBqbZeT395YF',
-    description: '주인장의 감상평 : 새벽에 들으면 감성적으로 변함2'
+    description: '새벽에 들으면 감성적으로 변함'
   },
   {
   title: 'Antifreeze',
   artist: '검정치마',
   spotifyId: '745W6tNeXVKjskHoCsMJvV',
-  description: '주인장의 감상평 : 한국 인디 록의 대중성있는 곡'
+  description: '한국 인디 록의 대중성있는 곡'
 },
 {
   title: '좋은 밤 좋은 꿈',
   artist: '너드커넥션',
   spotifyId: '3s761CQaziQ0GEN1yUkIsG',
-  description: '주인장의 감상평 : 지나간 추억을 미화시키는 사기 곡'
+  description: '지나간 추억을 미화시키는 사기 곡'
 },
 ]
 
