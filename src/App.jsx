@@ -16,73 +16,107 @@ import { auth, db } from './firebase'
 import './App.css'
 
 const recommendations = [
+  // noteType은 'review' | 'custom' | 'lyric' 중 하나 선택
   {
     title: 'EVERYTHING',
     artist: '검정치마',
     spotifyId: '4vb7g4GrE9cOrhEzUWadN8',
-    description: '검정치마의 대중적이 대표곡'
+    notes: [
+      { type: 'review', text: '사랑할때 들으면 You are my everything\n이별을때 들으면 You were my everything..' }
+    ]
   },
   {
     title: 'seasons',
     artist: 'wave to earth',
     spotifyId: '5VBjyOQzqlPNgdRPMM6prF',
-    description: 'wave to earth중 가장 좋아하는 곡'
+    notes: [
+    { type: 'lyric', text: 'I can\'t be your love...' }
+    ]
   },
   {
     title: 'Square (2017)',
     artist: '백예린',
     spotifyId: '0WZhf0isd4av5qlFfKknC3',
-    description: '화창한 날 들으면 기분 좋은 곡?'
+    notes: [
+    { type: 'review', text: '저 이노래 외국유명 팝송인줄알고 1달동안 똥꼬쇼하면서 찾다가 음악찾기어플로 찾음...' }
+    ]
   },
   {
     title: '숲',
     artist: '최유리',
     spotifyId: '33xRp6ZX1DKraRFHR9ZDck',
-    description: '새벽에 들으면 감성적으로 변함'
+    notes: [
+    { type: 'custom', text: '엄마, 아빠가 생각나는 곡... 오랜만에 전화 한통 드려야겠다.' }
+    ]
   },
   {
     title: '밤, 바다',
     artist: '최유리',
     spotifyId: '7zkut02u2ekBqbZeT395YF',
-    description: '새벽에 들으면 감성적으로 변함'
+    notes: [
+    { type: 'lyric', text: '\"고마웠어 내 어린 밤들아.\"\n\"내가 옆에 있을게 넌 말없이 그냥 울어도 돼.\"' }
+    ]
   },
   {
   title: 'Antifreeze',
   artist: '검정치마',
   spotifyId: '745W6tNeXVKjskHoCsMJvV',
-  description: '한국 인디 록의 대중성있는 곡'
+  notes: [
+    { type: 'review', text: '롤만할거같이 생겨놓고 존나 감성있게 잘만드네' }
+    ]
 },
 {
   title: '좋은 밤 좋은 꿈',
   artist: '너드커넥션',
   spotifyId: '3s761CQaziQ0GEN1yUkIsG',
-  description: '지나간 추억을 미화시키는 사기 곡'
+  notes: [
+    { type: 'review', text: '롤만할거같이 생겨놓고 존나 감성있게 잘만드네' },
+    { type: 'lyric', text: '"저 많은 별을 다 세어보아도,\n그대 마음은 헤아릴 수 없어요."' }
+    ]
 },
 {
   title: 'Nandemonaiya',
   artist: 'RADWIMPS',
   spotifyId: '7dEfa89dZfo6CQPdsgGCF6',
-  description: '이곡 들으면서 산책하면 미츠하 감정이입 가능'
+  notes: [
+    { type: 'review', text: '“Kimi no namae wa”' }
+    ]
 },
 {
   title: 'Pretender',
   artist: 'OFFICIAL HIGE DANDISM',
   spotifyId: '1OBAWkIciXl8rmbKtrp9ZG',
-  description: '무슨 말인지 모르겠지만 일단 신남'
+  notes: [
+    { type: 'custom', text: '무슨 말인지 모르겠지만 일단 신남' }
+    ]
 },
 {
   title: '애열',
   artist: '이희상',
   spotifyId: '467zSU1hr4OF3Zq5zVX3Dt',
-  description: '개인적으로 목소리랑 바이브가 감성적이라 매우 추천'
+  notes: [
+    { type: 'introduce', text: 'Here With  Me랑은 같은 샘플이고 두 곡 다 전혀 문제가 없는 곡' }
+    ]
 },
 {
   title: '은방울',
   artist: 'DANIEL',
   spotifyId: '4gAIUEY7VkeiKQOPwIYaYb',
-  description: '인스타에 많이 보이는 감성적인 브금'
+  notes: [
+    { type: 'review', text: '우리 조금만 더 성숙한 시기에 만날걸 그랬다.' }
+    ]
 },
 ]
+
+
+
+
+const noteLabels = {
+  review: '주인장이 뽑은 최고의 감상평',
+  lyric: '주목할 만한 가사',
+  custom: '주인장의 감상평',
+  introduce: '곡 설명'
+};
 
 const initialSubmission = {
   nickname: '',
@@ -96,7 +130,7 @@ const featuredStories = {
       id: 'samchogoryeo-everything',
       nickname: '삼초고려',
       story:
-        '일상에 지치고 사랑에 실패해 한참을 헤매던 때, 아무 일정도 없던 어느 날 밤 그 사람을 만났습니다. 이 곡을 들으며 함께 걸었던 밤바다는 아직도 선명해요. 지난 추억이 되었지만 이 곡을 들으면 그때의 행복했던 추억이 생각납니다!',
+        '이 노래를 들으면서 그 사람과 사랑을 시작했고 그 사랑이 끝났을 때도 이 노래를 들었습니다. 함께 같은 시간을 보내줘서 고마워 행복하게 잘지내!',
     },
   ],
 }
@@ -565,13 +599,17 @@ useEffect(() => {
                 </div>
 
                 <div className="description-area">
-                  <p className="category">TODAY'S PICK</p>                 
-                  <h2>{music.title}</h2>
-                  <p className="artist">{music.artist}</p>
-                  <p className="curator-note">
-                  <span className="curator-label">주인장의 감상평</span>
-                  <span className="curator-text">{music.description}</span>
-                  </p>
+  <p className="category">TODAY'S PICK</p>                 
+  <h2>{music.title}</h2>
+  <p className="artist">{music.artist}</p>
+  
+  {music.notes.map((note, i) => (
+    <p className="curator-note" key={i}>
+      <span className="curator-label">{noteLabels[note.type]}</span>
+      <span className="curator-text">{note.text}</span>
+    </p>
+  ))}
+
 
                   <div className="button-group">
                     <button
@@ -677,12 +715,12 @@ useEffect(() => {
                 </p>
 
                 <label>
-                  사연
+                  사연 또는 감상평
                   <textarea
                     name="story"
                     value={submission.story}
                     onChange={updateSubmission}
-                    placeholder="이 노래를 추천하고 싶은 이유를 적어주세요."
+                    placeholder="이 노래를 추천하고 싶은 이유 또는 감상평을 적어주세요."
                     rows="5"
                   />
                 </label>

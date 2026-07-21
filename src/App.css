@@ -156,7 +156,7 @@ button:disabled {
 .recommendation {
   display: grid;
   grid-template-columns: minmax(260px, 0.95fr) minmax(280px, 1.05fr);
-  align-items: start;
+  align-items: start; /* 원래대로 */
   text-align: left;
 }
 
@@ -173,6 +173,25 @@ button:disabled {
   border: 0;
 }
 
+.description-area {
+  max-height: 352px;      /* 앨범 영역 높이에 맞춤 */
+  overflow-y: auto;        /* 넘치면 세로 스크롤 */
+  scrollbar-width: thin;   /* 파이어폭스용 얇은 스크롤바 */
+}
+
+.description-area::-webkit-scrollbar {
+  width: 6px;
+}
+
+.description-area::-webkit-scrollbar-thumb {
+  background: rgba(47, 111, 99, 0.25);
+  border-radius: 999px;
+}
+
+.description-area::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 .description-area,
 .stories-card,
 .empty-card,
@@ -185,8 +204,10 @@ button:disabled {
 }
 
 .description-area {
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
+  white-space: pre-line; /* \n을 실제 줄바꿈으로 렌더링 */
+  padding-top: 32px; /* 필요하면 여백 살짝 추가 */
 }
 
 .description-area h2,
@@ -619,11 +640,17 @@ button:disabled {
   line-height: 1.75;
 }
 
+
 /* ========== 07. 반응형 화면 ========== */
 
 @media (max-width: 900px) {
   .app {
     padding: 36px 18px;
+  }
+
+  .description-area {
+    max-height: none;
+    overflow-y: visible;
   }
 
   .content-layout,
@@ -655,11 +682,11 @@ button:disabled {
   }
 
   .album-area {
-    height: 352px;
+    min-height: 352px;
   }
 
   .album-area iframe {
-    height: 352px;
+    min-height: 352px;
   }
 
   .ranking-item-button {
