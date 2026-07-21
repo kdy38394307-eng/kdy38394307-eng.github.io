@@ -720,7 +720,7 @@ useEffect(() => {
                     name="story"
                     value={submission.story}
                     onChange={updateSubmission}
-                    placeholder="이 노래를 추천하고 싶은 이유 또는 감상평을 적어주세요."
+                    placeholder="이 노래에 대한 사연 또는 감상평을 적어주세요."
                     rows="5"
                   />
                 </label>
